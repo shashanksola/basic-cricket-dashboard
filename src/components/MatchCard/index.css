@@ -1,1 +1,9 @@
 /* Write your CSS here */
+
+.prev-match {
+  background-color: #0f172a;
+  color: white;
+  margin: 16px;
+  padding: 16px;
+  text-align: center;
+}

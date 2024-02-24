@@ -2,6 +2,7 @@
 
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
+import LatestMatch from '../LatestMatch'
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
@@ -54,8 +55,7 @@ class TeamMatches extends Component {
 
   renderLatestMatch = () => {
     const {teamData} = this.state
-    console.log(teamData)
-    return <div>A</div>
+    return <LatestMatch teamData={teamData} />
   }
 
   render() {
@@ -63,7 +63,9 @@ class TeamMatches extends Component {
     return (
       <div>
         {isLoading ? (
-          <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
+          <div>
+            <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
+          </div>
         ) : (
           this.renderLatestMatch()
         )}

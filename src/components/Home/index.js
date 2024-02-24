@@ -39,7 +39,14 @@ class Home extends Component {
     const {dashboardData} = this.state
 
     return (
-      <div>
+      <div className="bg-container">
+        <h1>
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
+            alt="ipl logo"
+          />
+          IPL DashBoard
+        </h1>
         <ul>
           {dashboardData.map(each => (
             <TeamCard key={each.id} team={each} />
@@ -54,7 +61,9 @@ class Home extends Component {
     return (
       <div>
         {isLoading ? (
-          <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
+          <div>
+            <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
+          </div>
         ) : (
           this.renderDashboard()
         )}
